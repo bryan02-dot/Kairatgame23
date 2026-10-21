@@ -1,0 +1,32 @@
+{
+  "id": "/",
+  "name": "КАЙРАТ: 404 — Легенда Района",
+  "short_name": "КАЙРАТ: 404",
+  "description": "Смешная мобильная рофельная игра про легендарного друга Кайрата, который никогда не отвечает вовремя!",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#09090b",
+  "theme_color": "#ef4444",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

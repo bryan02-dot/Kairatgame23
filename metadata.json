@@ -1,0 +1,6 @@
+{
+  "name": "КАЙРАТ: 404 — Легенда Района",
+  "description": "Смешная мобильная рофельная игра про легендарного друга Кайрата, который никогда не отвечает вовремя!",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
