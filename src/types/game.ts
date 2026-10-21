@@ -1,4 +1,5 @@
 export type GameScreen = 
+  | 'splash'
   | 'menu' 
   | 'playing' 
   | 'level_select' 

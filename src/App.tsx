@@ -11,6 +11,7 @@ import {
 import { sound } from './services/sound';
 
 import { MainMenu } from './components/MainMenu';
+import { SplashScreen } from './components/SplashScreen';
 import { Navbar } from './components/Navbar';
 import { LevelSelectModal } from './components/LevelSelectModal';
 import { SkinsModal } from './components/SkinsModal';
@@ -30,7 +31,7 @@ import { Level6BossKairat } from './components/levels/Level6BossKairat';
 
 export default function App() {
   const [saveData, setSaveData] = useState<GameSaveData>(() => loadGameData());
-  const [screen, setScreen] = useState<GameScreen>('menu');
+  const [screen, setScreen] = useState<GameScreen>('splash');
   const [currentLevelId, setCurrentLevelId] = useState<number>(1);
   const [activeModal, setActiveModal] = useState<
     | null
@@ -223,7 +224,9 @@ export default function App() {
     <div className="min-h-[100dvh] w-full bg-black flex items-center justify-center">
       {/* Mobile Device Frame for responsive smartphone view */}
       <div className="mobile-device-frame relative flex flex-col overflow-hidden">
-        {screen === 'menu' ? (
+        {screen === 'splash' ? (
+          <SplashScreen onEnter={() => setScreen('menu')} />
+        ) : screen === 'menu' ? (
           <MainMenu
             saveData={saveData}
             onStartGame={handleStartGame}
