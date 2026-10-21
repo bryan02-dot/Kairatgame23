@@ -25,6 +25,7 @@ interface MainMenuProps {
   onOpenAchievements: () => void;
   onOpenSettings: () => void;
   onOpenInstall: () => void;
+  onOpenIconPreview: () => void;
   onToggleSound: () => void;
 }
 
@@ -45,6 +46,7 @@ export const MainMenu: React.FC<MainMenuProps> = ({
   onOpenAchievements,
   onOpenSettings,
   onOpenInstall,
+  onOpenIconPreview,
   onToggleSound,
 }) => {
   const [ambientPhrase, setAmbientPhrase] = useState(AMBIENT_SPEECH[0]);
@@ -77,18 +79,29 @@ export const MainMenu: React.FC<MainMenuProps> = ({
       {/* Top Mobile Bar */}
       <div className="relative z-20 flex items-center justify-between px-4 pt-3 pb-2">
         {/* App Icon mini preview + District label */}
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-xl overflow-hidden border border-red-500/40 glow-red-sm">
+        <div
+          onClick={() => {
+            sound.playClick();
+            onOpenIconPreview();
+          }}
+          className="flex items-center gap-2 cursor-pointer group active:scale-95 transition"
+        >
+          <div className="w-9 h-9 rounded-xl overflow-hidden border border-red-500/60 glow-red-sm group-hover:border-red-400">
             <img
-              src="/public/app-icon.png"
+              src="/app-icon.png"
               alt="Icon"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
           </div>
-          <span className="text-[11px] font-game text-zinc-400 tracking-wider">
-            РАЙОН 404
-          </span>
+          <div>
+            <span className="text-[11px] font-game text-white tracking-wider block leading-tight">
+              КАЙРАТ: 404
+            </span>
+            <span className="text-[9px] text-red-400 font-bold block">
+              Иконка игры
+            </span>
+          </div>
         </div>
 
         {/* Currency & Quick Toggles */}

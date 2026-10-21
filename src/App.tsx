@@ -18,6 +18,7 @@ import { MemesSoundboardModal } from './components/MemesSoundboardModal';
 import { AchievementsModal } from './components/AchievementsModal';
 import { SettingsModal } from './components/SettingsModal';
 import { InstallModal } from './components/InstallModal';
+import { IconPreviewModal } from './components/IconPreviewModal';
 import { VictoryModal } from './components/VictoryModal';
 
 import { Level1FindKairat } from './components/levels/Level1FindKairat';
@@ -39,6 +40,7 @@ export default function App() {
     | 'achievements'
     | 'settings'
     | 'install'
+    | 'icon_preview'
   >(null);
 
   // Victory / Result state
@@ -231,6 +233,7 @@ export default function App() {
             onOpenAchievements={() => setActiveModal('achievements')}
             onOpenSettings={() => setActiveModal('settings')}
             onOpenInstall={() => setActiveModal('install')}
+            onOpenIconPreview={() => setActiveModal('icon_preview')}
             onToggleSound={handleToggleSound}
           />
         ) : (
@@ -324,6 +327,11 @@ export default function App() {
 
         <InstallModal
           isOpen={activeModal === 'install'}
+          onClose={() => setActiveModal(null)}
+        />
+
+        <IconPreviewModal
+          isOpen={activeModal === 'icon_preview'}
           onClose={() => setActiveModal(null)}
         />
 

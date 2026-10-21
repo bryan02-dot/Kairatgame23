@@ -55,13 +55,13 @@ export const InstallModal: React.FC<InstallModalProps> = ({
         <div className="flex flex-col items-center text-center pt-1 mb-4">
           <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-2xl border-2 border-red-500/60 glow-red mb-3">
             <img
-              src="/public/app-icon.png"
+              src="/app-icon.png"
               alt="КАЙРАТ: 404 Иконка"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
             <div className="absolute top-1 right-1 px-1.5 py-0.5 rounded-md bg-red-600 text-[9px] font-game text-white font-bold">
-              404
+              HD
             </div>
           </div>
 
